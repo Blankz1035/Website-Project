@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+<title>Booking</title>
+<link rel="stylesheet" type="text/css" href="HotelCSS.css" />
+
+<style type="text/css">
+<!--
+#menubar { 
+	height: 40px; 
+	width: 1000px; 
+	margin:auto; 
+	border-radius: 5px; 
+	background-color: white;
+	opacity: 0.85;	
+	padding: 10px;
+
+}
+.menu {
+	float: left; 
+	padding: 0.6em 2.5em 0.1em 0.5em; 
+	cursor: default;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.menu ul  {
+	display: none; 
+	position: absolute; 
+	background-color: white;
+	list-style: none;
+	margin: 2px 5px 5px 0; 
+	padding: 0;
+	border-radius: 0.2em;
+}
+.menu ul li {
+	display: block; 
+	font-size: medium; 
+	padding: 0.3em;
+}
+div.menu:hover ul {
+	margin: 0; 
+	padding: 0; 
+	display: block;
+	background-color: white; 
+}
+div.menu ul li:hover  {
+	background-color: #cccccc;
+}
+-->
+</style>
+</head>
+
+<body id="rooms_bg">
+	<a id="top"></a>
+
+	<div style="color:black; text-align: center;">
+		<h1 Style="font: bolder 48px Century">The<br />
+		Sea&nbsp;View&nbsp;Hotel</h1>
+		
+		<h2>Booking<br/>&nbsp;</h2>
+	</div>
+
+	<div id="menubar">
+		<div class="menu">&nbsp;<a href="index.html">Home</a>&nbsp;
+		</div>
+
+		<div class="menu"><a href="rooms.html">Rooms & Suites</a>&nbsp;
+			<ul>
+				<li><a href="single.html">Single Rooms</a></li>
+				<li><a href="double.html">Double Rooms</a></li>
+				<li><a href="suite.html">Suites</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu"><a href="gallery.html">Photo Gallery</a>&nbsp;
+		</div>
+		
+		<div class="menu">Restaurant&nbsp;
+			<ul>
+				<li><a href="Menu.html">Menu</a></li>
+				<li><a href="Restaurant.html">Restaurant</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu"><a href="Events.html">Events & Facilities</a>&nbsp;
+			<ul>
+				<li><a href="bingo.html">Bingo</a></li>
+				<li><a href="golf.html">Golf</a></li>
+				<li><a href="poolspa.html">Pool & Spa</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu"><a href="contact.html">Contact us</a>&nbsp;
+			<ul>
+				<li><a href="Map.html" target="_blank">Find us!</a></li>	
+				<li><a href="booking.html">Book Now!</a></li>
+				<li><a href="Testimonials.html">Testimonials</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<section id="rooms_body">
+		<article>
+			<form method="post" action="mailto:ross.byrne@gmit.ie">
+ 
+				<p>For the convenience of our staff and to ensure a successful booking please fill out all fields of information.</p>
+				<br/>
+
+				<fieldset><legend>Personal Information</legend>
+					<br/>
+					<p>First Name: <input name="firstname" type="text" size="25" /> &nbsp; &nbsp;
+					Last Name: <input name="lastname" type="text" size="25" /> &nbsp; &nbsp;
+					<br/>
+					<br/>
+					Date of Birth: <input name="dateofbirth" type="text" value="DD/MM/YYYY" size="10" /> &nbsp; &nbsp;
+					E-mail Address: <input name="email" type="text" size="25" /> &nbsp; &nbsp;
+					</p>
+				</fieldset>
+				
+				<fieldset><legend>Address</legend>
+					<br/>
+					<p>Line 1: <input name="line1" type="text" size="25" />
+					<br/>
+					<br/>
+					Line 2: <input name="line2" type="text" size="25" />
+					<br/>
+					<br/>
+					Line 3: <input name="line3" type="text" size="25" />
+					<br/>
+					<br/>
+					City: <input name="city" type="text" size="25" />
+					<br/>
+					<br/>
+					County: <input name="county" type="text" size="25" /></p>
+				</fieldset>
+
+				<fieldset><legend>Payment Details</legend>
+					<br /><p>Select the card type you wish to pay with:
+					<select name="card">
+						<option>Master Card</option>
+						<option>Laser Card</option>
+						<option>Visa</option>
+						<option>Credit Card</option>
+					</select>
+					<br/>
+					<br/>
+					Card Number:
+					<input name="cardnumber" type="text" size="30" maxlength="30" />
+					<br/>
+					<br/>
+					Name of Card Owner:
+					<input name="cardowner" type="text" size="20" maxlength="30" />
+					<br/>
+					<br/>
+					Card Expiry Date:
+					<input name="expirydate" type="text" value="MM/YYYY" size="7" maxlength="7" />
+					</p>
+				</fieldset>
+
+				<fieldset><legend>Room Selection</legend>
+					<br /><p>Select which room you would like to stay in:
+					<br /><input name="roomtype" type="checkbox" value="single room" /> Single Room &nbsp;
+					<input name="roomtype" type="checkbox" value="double room" /> Double Room &nbsp;
+					<input name="roomtype" type="checkbox" value="suite" /> Suite &nbsp;
+					<br/>
+					<br/>
+					How many nights do you wish to stay for?:
+					<br /><input name="numberofnights" type="radio" value="1night" /> 1 Night &nbsp;
+					<input name="numberofnights" type="radio" value="2nights" /> 2 Nights &nbsp;
+					<input name="numberofnights" type="radio" value="3nights" /> 3 Nights &nbsp;
+					Other:
+					<input name="other" type="text" size="5" />
+					<br/>
+					<br/>
+					Date you would like to stay: <input name="dateofstay" type="text" value="DD/MM/YYYY" size="10" /></p>
+
+				</fieldset>
+				
+				<br />What else could you tell us about your room preference?
+				<br /><textarea name="roompreference" rows="8" cols="80"></textarea>
+				<br/>
+				<br/>
+				<p>By clicking 'Submit', you agree that all information provided is correct.</p>
+				<br/>
+				<p><input type="submit" value="Submit" />
+				<input type="reset" value="Reset" /></p>
+				<br/><p>A copy of your booking details and a receipt will be sent to the e-mail address provided.</p>
+			</form>
+		</article>
+		
+		<article>
+			<br /><p><a href="#top" style="color:black"><u>Return to Top</u></a></p>
+		</article>
+		
+	</section>	
+	
+	<footer>
+		<div id="footer_img">
+			<a href="http://www.facebook.com/profile.php?id=100007528590077"><img class="footer_img" src="images/facebook_logo.jpg" height="70" width="270" alt="Facebook"></a>
+			<a href="booking.html"><img class="footer_img" src="images/book-now.png" height="90" width="90" alt="Book Now"></a>
+			<a href="http://www.twitter.com/SeaViewHoteI"><img class="footer_img" src="images/twitter_logo.png" height="70" width="270" alt="Twitter"></a>
+		</div>
+		
+		<h3 style="text-align: left">Copyright &copy; 2013 <a href="Hotel.html" title="Sea View Hotel">Sea View Hotel</a></h3>
+	
+	</footer>
+</body>
+</html>
